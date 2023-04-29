@@ -1,4 +1,6 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero')
+
+lsp.preset("recommended")
 
 local function allow_format(servers)
   return function(client) return vim.tbl_contains(servers, client.name) end
@@ -8,12 +10,12 @@ end
 lsp.ensure_installed({
   'tsserver',
   "eslint",
-  "lua_ls"
+  "lua_ls",
+  "html"
 })
 
 
 local on_attach = function(client, bufnr)
-	print(client.name)
 	lsp.default_keymaps({buffer = bufnr})
 
 	vim.keymap.set("n", "<leader>lf", function()
@@ -54,10 +56,12 @@ local formatting = null_ls.builtins.formatting
 local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
-    sources = {
-	formatting.eslint_d,
-	code_actions.eslint_d
-    },
+  sources = {
+    formatting.eslint_d,
+    code_actions.eslint_d,
+
+    formatting.prettier,
+  },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

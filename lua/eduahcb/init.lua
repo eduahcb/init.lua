@@ -1,2 +1,2 @@
+require("eduahcb.set")
 require("eduahcb.remap")
-print("hello from eduahcb")

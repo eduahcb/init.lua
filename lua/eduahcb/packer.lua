@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('vim-airline/vim-airline') 
+  use('tpope/vim-commentary') 
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

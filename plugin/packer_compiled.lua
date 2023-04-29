@@ -166,6 +166,11 @@ _G.packer_plugins = {
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/vim-fugitive",
