@@ -17,14 +17,24 @@ return require('packer').startup(function(use)
 
   use {
 	  'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate'
+	  run = ':TSUpdate',
+    requires = {
+      {'JoosepAlviste/nvim-ts-context-commentstring'}
+    }
   }
 
   use('thePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('vim-airline/vim-airline') 
-  use('tpope/vim-commentary') 
+  use('JoosepAlviste/nvim-ts-context-commentstring')
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -43,7 +53,7 @@ return require('packer').startup(function(use)
 	  -- Autocompletion
 	  {'hrsh7th/nvim-cmp'},     -- Required
 	  {'hrsh7th/cmp-nvim-lsp'}, -- Required
-	  {'L3MON4D3/LuaSnip'},     -- Required
+    {'L3MON4D3/LuaSnip'}
   }
 
 }
