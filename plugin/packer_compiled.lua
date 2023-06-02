@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -114,6 +119,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  neotest = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-jest"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/neotest-jest",
+    url = "https://github.com/haydenmeade/neotest-jest"
+  },
+  ["neotest-playwright"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/neotest-playwright",
+    url = "https://github.com/thenbe/neotest-playwright"
+  },
+  ["neotest-vitest"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/neotest-vitest",
+    url = "https://github.com/marilari88/neotest-vitest"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -155,12 +180,6 @@ _G.packer_plugins = {
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["trouble.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
-    loaded = true,
-    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/undotree",
@@ -183,10 +202,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
