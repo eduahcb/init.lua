@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('vim-airline/vim-airline') 
   use('JoosepAlviste/nvim-ts-context-commentstring')
+  use('windwp/nvim-ts-autotag')
+  use('mfussenegger/nvim-dap')
 
   use {
     'numToStr/Comment.nvim',
