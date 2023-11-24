@@ -1,19 +1,20 @@
 local lsp = require('lsp-zero')
 local lsp_config = require('lspconfig')
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 
 local function allow_format(servers)
   return function(client) return vim.tbl_contains(servers, client.name) end
 end
 
-lsp.preset("recommended")
+lsp.preset('recommended')
 
 lsp.ensure_installed({
   'tsserver',
   "eslint",
   "lua_ls",
-  "html"
+  "html",
 })
-
 
 local on_attach = function(client, bufnr)
 	lsp.default_keymaps({buffer = bufnr})
@@ -28,7 +29,7 @@ local on_attach = function(client, bufnr)
       vim.lsp.buf.format({
         async = false,
         timeout_ms = 10000,
-        filter = allow_format({ 'tsserver' })
+        filter = allow_format({ 'tsserver', 'solargraph' })
       })
     end
 
@@ -54,6 +55,13 @@ lsp_config.eslint.setup({
   end,
 })
 
-
-
 lsp.setup()
+
+require('luasnip.loaders.from_vscode').lazy_load()
+
+cmp.setup({
+  sources = {
+    {name = 'nvim_lsp'},
+    {name = 'luasnip'},
+  }
+})

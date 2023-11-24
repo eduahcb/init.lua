@@ -30,6 +30,11 @@ return require('packer').startup(function(use)
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('windwp/nvim-ts-autotag')
   use('mfussenegger/nvim-dap')
+  use('suketa/nvim-dap-ruby')
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use('theHamsta/nvim-dap-virtual-text')
+  use('rafamadriz/friendly-snippets')
+  use('saadparwaiz1/cmp_luasnip')
 
   use {
     'numToStr/Comment.nvim',
@@ -68,8 +73,8 @@ use {
     "antoinemadec/FixCursorHold.nvim",
     'haydenmeade/neotest-jest',
     'marilari88/neotest-vitest',
-    'thenbe/neotest-playwright'
+    'thenbe/neotest-playwright',
+    'olimorris/neotest-rspec'
   },
 }
-
 end)
