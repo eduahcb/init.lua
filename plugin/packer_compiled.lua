@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -220,6 +225,11 @@ _G.packer_plugins = {
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
@@ -230,11 +240,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/EDUARDO.BARBOSA/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-fugitive"] = {
     loaded = true,

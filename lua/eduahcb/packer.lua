@@ -13,7 +13,15 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'}, {'nvim-tree/nvim-web-devicons'} }
   }
 
+  -- THEMES
   use 'lunarvim/horizon.nvim'
+
+  use {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  }
 
   use {
 	  'nvim-treesitter/nvim-treesitter',
@@ -23,10 +31,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
   use('thePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('vim-airline/vim-airline') 
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('windwp/nvim-ts-autotag')
   use('mfussenegger/nvim-dap')
