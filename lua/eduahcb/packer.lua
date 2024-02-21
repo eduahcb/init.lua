@@ -39,6 +39,20 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use {
+    "olexsmir/gopher.nvim",
+    requires = { -- dependencies
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  }
+
+  use {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
+  }
+
   use('thePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -46,6 +60,8 @@ return require('packer').startup(function(use)
   use('windwp/nvim-ts-autotag')
   use('mfussenegger/nvim-dap')
   use('suketa/nvim-dap-ruby')
+  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+  use('leoluz/nvim-dap-go')
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use('theHamsta/nvim-dap-virtual-text')
   use('rafamadriz/friendly-snippets')
@@ -90,7 +106,8 @@ use {
     'haydenmeade/neotest-jest',
     'marilari88/neotest-vitest',
     'thenbe/neotest-playwright',
-    'olimorris/neotest-rspec'
+    'olimorris/neotest-rspec',
+    'nvim-neotest/neotest-go'
   },
 }
 

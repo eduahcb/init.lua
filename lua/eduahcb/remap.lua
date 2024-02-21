@@ -23,3 +23,5 @@ vim.keymap.set("n", "<leader>ta", "<cmd>lua require('neotest').run.run(vim.fn.ge
 vim.keymap.set("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<CR>")
 vim.keymap.set("n", "<leader>to", "<cmd>lua require('neotest').output.open()<CR>")
 
+-- GO
+vim.keymap.set("n", "<leader>gj", "<cmd>GoTagAdd json<CR>")

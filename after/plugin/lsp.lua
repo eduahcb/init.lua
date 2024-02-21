@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
       vim.lsp.buf.format({
         async = false,
         timeout_ms = 10000,
-        filter = allow_format({ 'tsserver', 'solargraph' })
+        filter = allow_format({ 'tsserver', 'solargraph', 'gopls' })
       })
     end
 

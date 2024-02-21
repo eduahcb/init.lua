@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gopher.nvim"] = {
+    loaded = true,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/gopher.nvim",
+    url = "https://github.com/olexsmir/gopher.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -145,6 +150,11 @@ _G.packer_plugins = {
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/neotest",
     url = "https://github.com/nvim-neotest/neotest"
   },
+  ["neotest-go"] = {
+    loaded = true,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/neotest-go",
+    url = "https://github.com/nvim-neotest/neotest-go"
+  },
   ["neotest-jest"] = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/neotest-jest",
@@ -175,6 +185,11 @@ _G.packer_plugins = {
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
+  },
   ["nvim-dap-ruby"] = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/nvim-dap-ruby",
@@ -189,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
+  ["nvim-dap-vscode-js"] = {
+    loaded = true,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
+    url = "https://github.com/mxsdev/nvim-dap-vscode-js"
   },
   ["nvim-highlight-colors"] = {
     loaded = true,
@@ -255,6 +275,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eduahcb/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vscode-js-debug"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/eduahcb/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
+    url = "https://github.com/microsoft/vscode-js-debug"
   }
 }
 
