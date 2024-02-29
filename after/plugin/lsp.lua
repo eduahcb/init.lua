@@ -54,6 +54,17 @@ lsp_config.eslint.setup({
   end,
 })
 
+lsp_config.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      gofumpt = true,
+    },
+  },
+})
+
 lsp.setup()
 
 require('luasnip.loaders.from_vscode').lazy_load()

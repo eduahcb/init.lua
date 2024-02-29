@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 
   -- THEMES
   use 'lunarvim/horizon.nvim'
+  use 'editorconfig/editorconfig-vim'
 
 
   use {
