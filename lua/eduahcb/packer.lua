@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
   use('suketa/nvim-dap-ruby')
   use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
   use('leoluz/nvim-dap-go')
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use('theHamsta/nvim-dap-virtual-text')
   use('rafamadriz/friendly-snippets')
   use('saadparwaiz1/cmp_luasnip')
