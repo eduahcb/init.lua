@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   use {
     "microsoft/vscode-js-debug",
     opt = true,
-    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
+    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   }
 
   use('thePrimeagen/harpoon')
@@ -108,7 +108,7 @@ use {
     'marilari88/neotest-vitest',
     'thenbe/neotest-playwright',
     'olimorris/neotest-rspec',
-    'nvim-neotest/neotest-go'
+    'nvim-neotest/neotest-go',
   },
 }
 
