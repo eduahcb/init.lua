@@ -11,10 +11,10 @@ require("neotest").setup({
       }
     }),
     require("neotest-rspec"),
-    -- require("neotest-go")({
-    --   experimental = {
-    --     test_table = true,
-    --   }
-    -- })
+    require("neotest-go")({
+      experimental = {
+        test_table = true,
+      }
+    })
   },
 })

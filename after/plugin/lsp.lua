@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
 	lsp.default_keymaps({buffer = bufnr})
 
   local my_client = vim.lsp.get_active_clients({ name = "eslint" })
-
+  
 	vim.keymap.set("n", "<leader>lf", function()
 
     if #my_client == 1 then
@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
       vim.lsp.buf.format({
         async = false,
         timeout_ms = 10000,
-        filter = allow_format({ 'tsserver', 'solargraph', 'gopls' })
+        filter = allow_format({ 'tsserver', 'solargraph', 'gopls', 'biome'})
       })
     end
 
@@ -75,3 +75,17 @@ cmp.setup({
     {name = 'luasnip'},
   }
 })
+
+-- Tailwind csss variants
+require('lspconfig').tailwindcss.setup({
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {
+          { "([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]" }
+        },
+      },
+    },
+  },
+})
+
