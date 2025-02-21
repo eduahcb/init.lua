@@ -123,4 +123,15 @@ use {
 		}
 	end
 }
+
+-- COPILOT
+use { "zbirenbaum/copilot.lua" }
+
+use {
+  "zbirenbaum/copilot-cmp",
+  after = { "copilot.lua" },
+  config = function ()
+    require("copilot_cmp").setup()
+  end
+}
 end)

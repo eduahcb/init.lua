@@ -71,9 +71,18 @@ require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
   sources = {
+    {name = 'copilot'},
     {name = 'nvim_lsp'},
     {name = 'luasnip'},
-  }
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({
+      -- documentation says this is important.
+      -- I don't know why.
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = false,
+    })
+  })
 })
 
 -- Tailwind csss variants
