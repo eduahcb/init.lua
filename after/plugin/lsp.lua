@@ -12,7 +12,6 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   "lua_ls",
   "eslint",
-  "tsserver"
 })
 
 local on_attach = function(client, bufnr)
